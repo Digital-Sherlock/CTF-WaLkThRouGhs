@@ -1,0 +1,95 @@
+# Nmap 7.80 scan initiated Sun Oct 25 16:34:20 2020 as: nmap --script=vuln -oN vuln_scan.nmap 10.10.13.229
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.13.229
+Host is up (0.10s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp   open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.13.229
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.13.229:80/
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://10.10.13.229:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Form id: user-registration
+|     Form action: /index.php/component/users/?task=remind.remind&Itemid=101
+|     
+|     Path: http://10.10.13.229:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Form id: login-form
+|     Form action: /index.php/component/users/?Itemid=101
+|     
+|     Path: http://10.10.13.229:80/index.php/component/users/?view=reset&amp;Itemid=101
+|     Form id: user-registration
+|     Form action: /index.php/component/users/?task=reset.request&Itemid=101
+|     
+|     Path: http://10.10.13.229:80/index.php/component/users/?view=reset&amp;Itemid=101
+|     Form id: login-form
+|     Form action: /index.php/component/users/?Itemid=101
+|     
+|     Path: http://10.10.13.229:80/index.php
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://10.10.13.229:80/index.php/2-uncategorised
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://10.10.13.229:80/index.php/2-uncategorised/1-spider-man-robs-bank
+|     Form id: login-form
+|_    Form action: /index.php
+| http-dombased-xss: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.13.229
+|   Found the following indications of potential DOM based XSS: 
+|     
+|     Source: window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no')
+|_    Pages: http://10.10.13.229:80/, http://10.10.13.229:80/index.php, http://10.10.13.229:80/index.php/2-uncategorised, http://10.10.13.229:80/index.php/2-uncategorised/1-spider-man-robs-bank
+| http-enum: 
+|   /administrator/: Possible admin folder
+|   /administrator/index.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /administrator/manifests/files/joomla.xml: Joomla version 3.7.0
+|   /language/en-GB/en-GB.xml: Joomla version 3.7.0
+|   /htaccess.txt: Joomla!
+|   /README.txt: Interesting, a readme.
+|   /bin/: Potentially interesting folder
+|   /cache/: Potentially interesting folder
+|   /icons/: Potentially interesting folder w/ directory listing
+|   /images/: Potentially interesting folder
+|   /includes/: Potentially interesting folder
+|   /libraries/: Potentially interesting folder
+|   /modules/: Potentially interesting folder
+|   /templates/: Potentially interesting folder
+|_  /tmp/: Potentially interesting folder
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-trace: TRACE is enabled
+| http-vuln-cve2017-8917: 
+|   VULNERABLE:
+|   Joomla! 3.7.0 'com_fields' SQL Injection Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-8917
+|     Risk factor: High  CVSSv3: 9.8 (CRITICAL) (CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)
+|       An SQL injection vulnerability in Joomla! 3.7.x before 3.7.1 allows attackers
+|       to execute aribitrary SQL commands via unspecified vectors.
+|       
+|     Disclosure date: 2017-05-17
+|     Extra information:
+|       User: root@localhost
+|     References:
+|       https://blog.sucuri.net/2017/05/sql-injection-vulnerability-joomla-3-7.html
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8917
+3306/tcp open  mysql
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+
+# Nmap done at Sun Oct 25 16:36:21 2020 -- 1 IP address (1 host up) scanned in 120.86 seconds
