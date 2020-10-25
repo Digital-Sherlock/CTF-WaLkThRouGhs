@@ -1,0 +1,4 @@
+Medusa v2.2 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+ACCOUNT CHECK: [smbnt] Host: 10.10.226.221 (1 of 1, 0 complete) User: uontxpsz (1 of 1, 0 complete) Password: cyborg007haloterminator (1 of 31 complete)
+ACCOUNT FOUND: [smbnt] Host: 10.10.226.221 User: uontxpsz Password: cyborg007haloterminator [SUCCESS (ADMIN$ - Share Unavailable)]
