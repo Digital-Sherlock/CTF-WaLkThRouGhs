@@ -1,0 +1,25 @@
+# Nmap 7.80 scan initiated Sat Oct 24 19:33:06 2020 as: nmap -sS -sV -O -T4 -oN basic_scan.nmap 10.10.192.200
+Nmap scan report for 10.10.192.200
+Host is up (0.096s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.4 (protocol 2.0)
+80/tcp   open  http    Apache httpd 2.4.6 ((CentOS) PHP/5.6.40)
+3306/tcp open  mysql   MariaDB (unauthorized)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/24%OT=22%CT=1%CU=33783%PV=Y%DS=4%DC=I%G=Y%TM=5F94B9
+OS:D2%P=x86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=10E%TI=Z%II=I%TS=A)SEQ(SP=F
+OS:F%GCD=1%ISR=10E%TI=Z%TS=A)OPS(O1=M509ST11NW7%O2=M509ST11NW7%O3=M509NNT11
+OS:NW7%O4=M509ST11NW7%O5=M509ST11NW7%O6=M509ST11)WIN(W1=68DF%W2=68DF%W3=68D
+OS:F%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M509NNSNW7%CC=Y%Q=)
+OS:T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=
+OS:0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T
+OS:6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+
+OS:%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK
+OS:=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 4 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct 24 19:33:38 2020 -- 1 IP address (1 host up) scanned in 31.93 seconds
