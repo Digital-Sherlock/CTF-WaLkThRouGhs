@@ -1,0 +1,146 @@
+[92mENUM4LINUX - next generation[0m
+
+ ==========================
+|    Target Information    |
+ ==========================
+[94m[*] Target ........... 10.10.164.113[0m
+[94m[*] Username ......... ''[0m
+[94m[*] Random Username .. 'uontxpzs'[0m
+[94m[*] Password ......... ''[0m
+[94m[*] Timeout .......... 5 second(s)[0m
+
+ =====================================
+|    Service Scan on 10.10.164.113    |
+ =====================================
+[94m[*] Checking LDAP[0m
+[91m[-] Could not connect to LDAP on 389/tcp: connection refused[0m
+[94m[*] Checking LDAPS[0m
+[91m[-] Could not connect to LDAPS on 636/tcp: connection refused[0m
+[94m[*] Checking SMB[0m
+[92m[+] SMB is accessible on 445/tcp[0m
+[94m[*] Checking SMB over NetBIOS[0m
+[92m[+] SMB over NetBIOS is accessible on 139/tcp[0m
+
+ =====================================================
+|    NetBIOS Names and Workgroup for 10.10.164.113    |
+ =====================================================
+[92m[+] Got domain/workgroup name: WORKGROUP[0m
+[92m[+] Full NetBIOS names information:
+- SKYNET          <00> -         B <ACTIVE>  Workstation Service
+- SKYNET          <03> -         B <ACTIVE>  Messenger Service
+- SKYNET          <20> -         B <ACTIVE>  File Server Service
+- ..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+- WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+- WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+- WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+- MAC Address = 00-00-00-00-00-00[0m
+
+ ==========================================
+|    SMB Dialect Check on 10.10.164.113    |
+ ==========================================
+[94m[*] Check for legacy SMBv1 on 445/tcp[0m
+[92m[+] Server supports dialects higher SMBv1[0m
+
+ ==========================================
+|    RPC Session Check on 10.10.164.113    |
+ ==========================================
+[94m[*] Check for null session[0m
+[92m[+] Server allows session using username '', password ''[0m
+[94m[*] Check for random user session[0m
+[92m[+] Server allows session using username 'uontxpzs', password ''[0m
+[92m[H] Rerunning enumeration with user 'uontxpzs' might give more results[0m
+
+ ====================================================
+|    Domain Information via RPC for 10.10.164.113    |
+ ====================================================
+[92m[+] Domain: WORKGROUP[0m
+[92m[+] SID: NULL SID[0m
+[92m[+] Host is part of a workgroup (not a domain)[0m
+
+ ===============================================
+|    OS Information via RPC on 10.10.164.113    |
+ ===============================================
+[92m[+] The following OS information were found:
+server_type_string = Wk Sv PrQ Unx NT SNT skynet server (Samba, Ubuntu)
+platform_id        = 500
+os_version         = 6.1
+server_type        = 0x809a03
+os                 = Linux/Unix[0m
+
+ ======================================
+|    Users via RPC on 10.10.164.113    |
+ ======================================
+[94m[*] Enumerating users[0m
+[92m[+] Found 1 users via 'querydispinfo'[0m
+[92m[+] Found 1 users via 'enumdomusers'[0m
+[92m[+] After merging user results we have 1 users total:
+'1000':
+  username: milesdyson
+  name: ''
+  acb: '0x00000010'
+  description: ''[0m
+
+ =======================================
+|    Groups via RPC on 10.10.164.113    |
+ =======================================
+[94m[*] Enumerating groups[0m
+[92m[+] Found 0 group(s) via 'enumalsgroups domain'[0m
+[92m[+] Found 0 group(s) via 'enumalsgroups builtin'[0m
+[92m[+] Found 0 group(s) via 'enumdomgroups'[0m
+
+ =======================================
+|    Shares via RPC on 10.10.164.113    |
+ =======================================
+[94m[*] Enumerating shares[0m
+[92m[+] Found 4 share(s):
+IPC$:
+  comment: IPC Service (skynet server (Samba, Ubuntu))
+  type: IPC
+anonymous:
+  comment: Skynet Anonymous Share
+  type: Disk
+milesdyson:
+  comment: Miles Dyson Personal Share
+  type: Disk
+print$:
+  comment: Printer Drivers
+  type: Disk[0m
+[94m[*] Testing share IPC$[0m
+[91m[-] Could not check share: STATUS_OBJECT_NAME_NOT_FOUND[0m
+[94m[*] Testing share anonymous[0m
+[92m[+] Mapping: OK, Listing: OK[0m
+[94m[*] Testing share milesdyson[0m
+[92m[+] Mapping: DENIED, Listing: N/A[0m
+[94m[*] Testing share print$[0m
+[92m[+] Mapping: DENIED, Listing: N/A[0m
+
+ ==========================================
+|    Policies via RPC for 10.10.164.113    |
+ ==========================================
+[94m[*] Trying port 445/tcp[0m
+[92m[+] Found policy:
+domain_password_information:
+  pw_history_length: None
+  min_pw_length: 5
+  min_pw_age: none
+  max_pw_age: 49710 days 6 hours 21 minutes
+  pw_properties:
+  - DOMAIN_PASSWORD_COMPLEX: false
+  - DOMAIN_PASSWORD_NO_ANON_CHANGE: false
+  - DOMAIN_PASSWORD_NO_CLEAR_CHANGE: false
+  - DOMAIN_PASSWORD_LOCKOUT_ADMINS: false
+  - DOMAIN_PASSWORD_PASSWORD_STORE_CLEARTEXT: false
+  - DOMAIN_PASSWORD_REFUSE_PASSWORD_CHANGE: false
+domain_lockout_information:
+  lockout_observation_window: 30 minutes
+  lockout_duration: 30 minutes
+  lockout_threshold: None
+domain_logoff_information:
+  force_logoff_time: 49710 days 6 hours 21 minutes[0m
+
+ ==========================================
+|    Printers via RPC for 10.10.164.113    |
+ ==========================================
+[92m[+] No printers returned (this is not an error)[0m
+
+Completed after 21.44 seconds
