@@ -1,0 +1,31 @@
+# Nmap 7.80 scan initiated Tue Jul 21 17:44:15 2020 as: nmap -sS -sC -sV -O -oN Desktop/TryHackMe/Avengers/basic_scan.nmap 10.10.138.42
+Nmap scan report for 10.10.138.42
+Host is up (0.11s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 c7:a3:0d:d4:e7:03:a1:b1:36:b0:fb:c0:87:79:9e:b7 (RSA)
+|   256 3d:13:5a:b9:fa:b9:fe:65:07:7b:b3:7d:fa:8c:30:6f (ECDSA)
+|_  256 d8:6b:96:66:ad:d9:ae:ad:24:01:fb:69:b4:f4:b8:1a (ED25519)
+80/tcp open  http    Node.js Express framework
+|_http-title: Avengers! Assemble!
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=7/21%OT=21%CT=1%CU=34321%PV=Y%DS=2%DC=I%G=Y%TM=5F1761C
+OS:B%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=102%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=104%GCD=1%ISR=102%TI=Z%CI=Z%TS=A)OPS(O1=M508ST11NW7%O2=M508ST11NW7%O
+OS:3=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)WIN(W1=68DF%W2=
+OS:68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M508NNSN
+OS:W7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%R
+OS:IPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jul 21 17:44:43 2020 -- 1 IP address (1 host up) scanned in 28.28 seconds
