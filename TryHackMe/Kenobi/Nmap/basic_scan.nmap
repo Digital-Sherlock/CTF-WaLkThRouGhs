@@ -1,0 +1,82 @@
+# Nmap 7.80 scan initiated Tue Jun 23 16:33:29 2020 as: nmap -sC -sV -O -oN basic_scan.nmap 10.10.155.218
+Nmap scan report for 10.10.155.218
+Host is up (0.10s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         ProFTPD 1.3.5
+22/tcp   open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b3:ad:83:41:49:e9:5d:16:8d:3b:0f:05:7b:e2:c0:ae (RSA)
+|   256 f8:27:7d:64:29:97:e6:f8:65:54:65:22:f7:c8:1d:8a (ECDSA)
+|_  256 5a:06:ed:eb:b6:56:7e:4c:01:dd:ea:bc:ba:fa:33:79 (ED25519)
+80/tcp   open  http        Apache httpd 2.4.18 ((Ubuntu))
+| http-robots.txt: 1 disallowed entry 
+|_/admin.html
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+111/tcp  open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/tcp6  nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100003  2,3,4       2049/udp6  nfs
+|   100005  1,2,3      38417/udp6  mountd
+|   100005  1,2,3      42723/tcp   mountd
+|   100005  1,2,3      57551/udp   mountd
+|   100005  1,2,3      60375/tcp6  mountd
+|   100021  1,3,4      35163/tcp6  nlockmgr
+|   100021  1,3,4      38319/tcp   nlockmgr
+|   100021  1,3,4      49014/udp   nlockmgr
+|   100021  1,3,4      58733/udp6  nlockmgr
+|   100227  2,3         2049/tcp   nfs_acl
+|   100227  2,3         2049/tcp6  nfs_acl
+|   100227  2,3         2049/udp   nfs_acl
+|_  100227  2,3         2049/udp6  nfs_acl
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+2049/tcp open  nfs_acl     2-3 (RPC #100227)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=6/23%OT=21%CT=1%CU=31586%PV=Y%DS=2%DC=I%G=Y%TM=5EF2673
+OS:8%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%II=I%TS=8)SEQ
+OS:(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%TS=8)OPS(O1=M508ST11NW7%O2=M508ST11NW7%O
+OS:3=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)WIN(W1=68DF%W2=
+OS:68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M508NNSN
+OS:W7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%R
+OS:IPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: Host: KENOBI; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 1h40m01s, deviation: 2h53m12s, median: 0s
+|_nbstat: NetBIOS name: KENOBI, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: kenobi
+|   NetBIOS computer name: KENOBI\x00
+|   Domain name: \x00
+|   FQDN: kenobi
+|_  System time: 2020-06-23T15:33:58-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-06-23T20:33:58
+|_  start_date: N/A
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun 23 16:34:00 2020 -- 1 IP address (1 host up) scanned in 31.60 seconds
