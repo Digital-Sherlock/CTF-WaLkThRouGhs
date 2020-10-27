@@ -1,0 +1,60 @@
+# Nmap 7.80 scan initiated Sat Aug 22 18:08:25 2020 as: nmap --script=vuln -Pn -oN vuln_scan.nmap 10.10.49.21
+Nmap scan report for 10.10.49.21
+Host is up (0.11s latency).
+Not shown: 998 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.49.21
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.49.21:80/
+|     Form id: aspnetform
+|     Form action: /
+|     
+|     Path: http://10.10.49.21:80/post/welcome-to-hack-park
+|     Form id: aspnetform
+|     Form action: /post/welcome-to-hack-park
+|     
+|     Path: http://10.10.49.21:80/archive
+|     Form id: aspnetform
+|     Form action: /archive
+|     
+|     Path: http://10.10.49.21:80/Account/login.aspx?ReturnURL=/admin/
+|     Form id: form1
+|_    Form action: login.aspx?ReturnURL=%2fadmin%2f
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /calendar/cal_search.php: ExtCalendar
+|   /robots.txt: Robots file
+|   /calendar/cal_cat.php: Calendarix
+|   /archive/: Potentially interesting folder
+|   /archives/: Potentially interesting folder
+|_  /author/: Potentially interesting folder
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+3389/tcp open  ms-wbt-server
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+|_sslv2-drown: 
+
+# Nmap done at Sat Aug 22 18:15:03 2020 -- 1 IP address (1 host up) scanned in 398.25 seconds
