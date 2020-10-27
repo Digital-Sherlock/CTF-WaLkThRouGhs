@@ -1,0 +1,107 @@
+[1;34m[*][0;0m initiating winsploit version 3.3...
+[1;34m[*][0;0m database file detected as xls or xlsx based on extension
+[1;34m[*][0;0m attempting to read from the systeminfo input file
+[1;32m[+][0;0m systeminfo input file read successfully (ascii)
+[1;34m[*][0;0m querying database file for potential vulnerabilities
+[1;34m[*][0;0m comparing the 8 hotfix(es) against the 266 potential bulletins(s) with a database of 137 known exploits
+[1;34m[*][0;0m there are now 249 remaining vulns
+[1;32m[+][0;0m [E] exploitdb PoC, [M] Metasploit module, [*] missing bulletin
+[1;32m[+][0;0m windows version identified as 'Windows 2012 R2 64-bit'
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-135: Security Update for Windows Kernel-Mode Drivers (3199135) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/40745/ -- Microsoft Windows Kernel - win32k Denial of Service (MS16-135)
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/41015/ -- Microsoft Windows Kernel - 'win32k.sys' 'NtSetWindowLongPtr' Privilege Escalation (MS16-135) (2)
+[1;34m[*][0;0m   https://github.com/tinysec/public/tree/master/CVE-2016-7255
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-098: Security Update for Windows Kernel-Mode Drivers (3178466) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/41020/ -- Microsoft Windows 8.1 (x64) - RGNOBJ Integer Overflow (MS16-098)
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS16-075: Security Update for Windows SMB Server (3164038) - Important
+[1;34m[*][0;0m   https://github.com/foxglovesec/RottenPotato
+[1;34m[*][0;0m   https://github.com/Kevin-Robertson/Tater
+[1;34m[*][0;0m   https://bugs.chromium.org/p/project-zero/issues/detail?id=222 -- Windows: Local WebDAV NTLM Reflection Elevation of Privilege
+[1;34m[*][0;0m   https://foxglovesecurity.com/2016/01/16/hot-potato/ -- Hot Potato - Windows Privilege Escalation
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-074: Security Update for Microsoft Graphics Component (3164036) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39990/ -- Windows - gdi32.dll Multiple DIB-Related EMF Record Handlers Heap-Based Out-of-Bounds Reads/Memory Disclosure (MS16-074), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39991/ -- Windows Kernel - ATMFD.DLL NamedEscape 0x250C Pool Corruption (MS16-074), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-063: Cumulative Security Update for Internet Explorer (3163649) - Critical
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39994/ -- Internet Explorer 11 - Garbage Collector Attribute Type Confusion (MS16-063), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-032: Security Update for Secondary Logon to Address Elevation of Privile (3143141) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/40107/ -- MS16-032 Secondary Logon Handle Privilege Escalation, MSF
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39574/ -- Microsoft Windows 8.1/10 - Secondary Logon Standard Handles Missing Sanitization Privilege Escalation (MS16-032), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39719/ -- Microsoft Windows 7-10 & Server 2008-2012 (x32/x64) - Local Privilege Escalation (MS16-032) (PowerShell), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39809/ -- Microsoft Windows 7-10 & Server 2008-2012 (x32/x64) - Local Privilege Escalation (MS16-032) (C#)
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS16-016: Security Update for WebDAV to Address Elevation of Privilege (3136041) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/40085/ -- MS16-016 mrxdav.sys WebDav Local Privilege Escalation, MSF
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39788/ -- Microsoft Windows 7 - WebDAV Privilege Escalation Exploit (MS16-016) (2), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39432/ -- Microsoft Windows 7 SP1 x86 - WebDAV Privilege Escalation (MS16-016) (1), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-014: Security Update for Microsoft Windows to Address Remote Code Execution (3134228) - Important
+[1;34m[*][0;0m   Windows 7 SP1 x86 - Privilege Escalation (MS16-014), https://www.exploit-db.com/exploits/40039/, PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS16-007: Security Update for Microsoft Windows to Address Remote Code Execution (3124901) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39232/ -- Microsoft Windows devenum.dll!DeviceMoniker::Load() - Heap Corruption Buffer Underflow (MS16-007), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39233/ -- Microsoft Office / COM Object DLL Planting with WMALFXGFXDSP.dll (MS-16-007), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS15-132: Security Update for Microsoft Windows to Address Remote Code Execution (3116162) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38968/ -- Microsoft Office / COM Object DLL Planting with comsvcs.dll Delay Load of mqrt.dll (MS15-132), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38918/ -- Microsoft Office / COM Object els.dll DLL Planting (MS15-134), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS15-112: Cumulative Security Update for Internet Explorer (3104517) - Critical
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39698/ -- Internet Explorer 9/10/11 - CDOMStringDataList::InitFromString Out-of-Bounds Read (MS15-112)
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS15-111: Security Update for Windows Kernel to Address Elevation of Privilege (3096447) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38474/ -- Windows 10 Sandboxed Mount Reparse Point Creation Mitigation Bypass (MS15-111), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS15-102: Vulnerabilities in Windows Task Management Could Allow Elevation of Privilege (3089657) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38202/ -- Windows CreateObjectTask SettingsSyncDiagnostics Privilege Escalation, PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38200/ -- Windows Task Scheduler DeleteExpiredTaskAfter File Deletion Privilege Escalation, PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38201/ -- Windows CreateObjectTask TileUserBroker Privilege Escalation, PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS15-097: Vulnerabilities in Microsoft Graphics Component Could Allow Remote Code Execution (3089656) - Critical
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38198/ -- Windows 10 Build 10130 - User Mode Font Driver Thread Permissions Privilege Escalation, PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38199/ -- Windows NtUserGetClipboardAccessToken Token Leak, PoC
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS15-078: Vulnerability in Microsoft Font Driver Could Allow Remote Code Execution (3079904) - Critical
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/38222/ -- MS15-078 Microsoft Windows Font Driver Buffer Overflow
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS15-051: Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege (3057191) - Important
+[1;34m[*][0;0m   https://github.com/hfiref0x/CVE-2015-1701, Win32k Elevation of Privilege Vulnerability, PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/37367/ -- Windows ClientCopyImage Win32k Exploit, MSF
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS14-068: Vulnerability in Kerberos Could Allow Elevation of Privilege (3011780) - Critical
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35474/ -- Windows Kerberos - Elevation of Privilege (MS14-068), PoC
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS14-064: Vulnerabilities in Windows OLE Could Allow Remote Code Execution (3011443) - Critical
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/37800// -- Microsoft Windows HTA (HTML Application) - Remote Code Execution (MS14-064), PoC
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35308/ -- Internet Explorer OLE Pre-IE11 - Automation Array Remote Code Execution / Powershell VirtualAlloc (MS14-064), PoC
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35229/ -- Internet Explorer <= 11 - OLE Automation Array Remote Code Execution (#1), PoC
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35230/ -- Internet Explorer < 11 - OLE Automation Array Remote Code Execution (MSF), MSF
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35235/ -- MS14-064 Microsoft Windows OLE Package Manager Code Execution Through Python, MSF
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35236/ -- MS14-064 Microsoft Windows OLE Package Manager Code Execution, MSF
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS14-060: Vulnerability in Windows OLE Could Allow Remote Code Execution (3000869) - Important
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35055/ -- Windows OLE - Remote Code Execution 'Sandworm' Exploit (MS14-060), PoC
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35020/ -- MS14-060 Microsoft Windows OLE Package Manager Code Execution, MSF
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS14-040: Vulnerability in Ancillary Function Driver (AFD) Could Allow Elevation of Privilege (2975684) - Important
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39525/ -- Microsoft Windows 7 x64 - afd.sys Privilege Escalation (MS14-040), PoC
+[1;34m[*][0;0m   https://www.exploit-db.com/exploits/39446/ -- Microsoft Windows - afd.sys Dangling Pointer Privilege Escalation (MS14-040), PoC
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS14-035: Cumulative Security Update for Internet Explorer (2969262) - Critical
+[1;32m[E][0;0m MS14-029: Security Update for Internet Explorer (2962482) - Critical
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/34458/
+[1;34m[*][0;0m 
+[1;32m[E][0;0m MS14-026: Vulnerability in .NET Framework Could Allow Elevation of Privilege (2958732) - Important
+[1;34m[*][0;0m   http://www.exploit-db.com/exploits/35280/, -- .NET Remoting Services Remote Command Execution, PoC
+[1;34m[*][0;0m 
+[1;32m[M][0;0m MS14-012: Cumulative Security Update for Internet Explorer (2925418) - Critical
+[1;32m[M][0;0m MS14-009: Vulnerabilities in .NET Framework Could Allow Elevation of Privilege (2916607) - Important
+[1;32m[M][0;0m MS13-097: Cumulative Security Update for Internet Explorer (2898785) - Critical
+[1;32m[M][0;0m MS13-090: Cumulative Security Update of ActiveX Kill Bits (2900986) - Critical
+[1;32m[M][0;0m MS13-080: Cumulative Security Update for Internet Explorer (2879017) - Critical
+[1;34m[*][0;0m done
