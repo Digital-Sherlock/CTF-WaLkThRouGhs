@@ -1,6 +1,6 @@
 # Walkthrough
 
-> Vadim Polovnikov | October xx, 2020
+> Vadim Polovnikov | October 28, 2020
 
 ## Reconnaissance / Port-Scanning
 
