@@ -1,0 +1,127 @@
+# Nmap 7.80 scan initiated Wed Jul  1 16:55:35 2020 as: nmap --script=vuln -oN vuln_scan.nmap 10.10.102.122
+Nmap scan report for 10.10.102.122
+Host is up (0.10s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE
+22/tcp  closed ssh
+80/tcp  open   http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.102.122
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.102.122:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catch(e){o=0}return
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catch(e){o=0}return
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."+"forcedLinkTrackingTimeout)s.forcedLinkTrackingTimeout=250;setTimeout('if(window.s_c_il)window.s_c_il['+s._in+'].bcr()',s.forcedLinkTrackingTimeout);}else
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."+"forcedLinkTrackingTimeout)s.forcedLinkTrackingTimeout=250;setTimeout('if(window.s_c_il)window.s_c_il['+s._in+'].bcr()',s.forcedLinkTrackingTimeout);}else
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/BASE_URL+%22/live/%22);this.firstBoot?(this.firstBoot=!1,this.track.omni("Email
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/js/BASE_URL+%22/live/%22);this.firstBoot?(this.firstBoot=!1,this.track.omni("Email
+|     Form id: 
+|     Form action: http://10.10.102.122/
+|     
+|     Path: http://10.10.102.122:80/wp-login.php
+|     Form id: loginform
+|_    Form action: http://10.10.102.122/wp-login.php
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /admin/: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /wp-login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /feed/: Wordpress version: 4.3.1
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: Interesting, a readme.
+|   /0/: Potentially interesting folder
+|_  /image/: Potentially interesting folder
+|_http-passwd: ERROR: Script execution failed (use -d to debug)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+443/tcp open   https
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.102.122
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: https://10.10.102.122:443/js/BASE_URL
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/BASE_URL
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s."
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catch(e){o=0}return
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/js/u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catch(e){o=0}return
+|     Form id: 
+|     Form action: https://10.10.102.122:443/
+|     
+|     Path: https://10.10.102.122:443/wp-login.php
+|     Form id: loginform
+|_    Form action: https://10.10.102.122:443/wp-login.php
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /admin/: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /wp-login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /feed/: Wordpress version: 4.3.1
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: Interesting, a readme.
+|   /0/: Potentially interesting folder
+|_  /image/: Potentially interesting folder
+|_http-passwd: ERROR: Script execution failed (use -d to debug)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_sslv2-drown: 
+
+# Nmap done at Wed Jul  1 16:57:19 2020 -- 1 IP address (1 host up) scanned in 104.45 seconds
