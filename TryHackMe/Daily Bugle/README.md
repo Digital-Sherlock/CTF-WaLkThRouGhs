@@ -15,7 +15,7 @@ PORT     STATE SERVICE VERSION
 3306/tcp open  mysql   MariaDB (unauthorized)
 ```
 
-Full nmap scan can be found here: [_link_]("" "")
+Full nmap scan can be found here: [_link_]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/Nmap/basic_scan.nmap" "nmap")
 
 **Vuln Nmap Scan (version):**
 
@@ -38,7 +38,7 @@ http-vuln-cve2017-8917:
 
 ```
 
-Full nmap vuln scan can be found here -> [_link_]("" "")
+Full nmap vuln scan can be found here -> [_link_]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/Nmap/vuln_scan.nmap" "vuln_nmap")
 
 Joomla CMS seems to be vulnerable to SQL Injection.
 
@@ -81,7 +81,7 @@ def joomla_370_sqli_extract(options, sess, token, colname, morequery):
 	return result
 ````
 
-[User\'s information]("" "link to the file") retrieved:
+[User\'s information]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/joomla_user_info.txt" "link to the file") retrieved:
 >Found user ['811', 'Super User', 'jonah', 'jonah@tryhackme.com', '$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm', '', '']
 
 JohnTheRipper Command: **_john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt_**
