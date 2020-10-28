@@ -1,0 +1,86 @@
+# Nmap 7.80 scan initiated Mon Aug 10 17:12:35 2020 as: nmap --script=vuln -oN vuln_scan.nmap 10.10.170.94
+Nmap scan report for 10.10.170.94
+Host is up (0.10s latency).
+Not shown: 989 closed ports
+PORT      STATE SERVICE
+80/tcp    open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+135/tcp   open  msrpc
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+139/tcp   open  netbios-ssn
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+445/tcp   open  microsoft-ds
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ms-wbt-server
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+|_sslv2-drown: 
+8080/tcp  open  http-proxy
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-method-tamper: 
+|   VULNERABLE:
+|   Authentication bypass by HTTP verb tampering
+|     State: VULNERABLE (Exploitable)
+|       This web server contains password protected resources vulnerable to authentication bypass
+|       vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the
+|        common HTTP methods and in misconfigured .htaccess files.
+|              
+|     Extra information:
+|       
+|   URIs suspected to be vulnerable to HTTP verb tampering:
+|     /~login [GENERIC]
+|   
+|     References:
+|       https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29
+|       http://www.mkit.com.ar/labs/htexploit/
+|       http://www.imperva.com/resources/glossary/http_verb_tampering.html
+|_      http://capec.mitre.org/data/definitions/274.html
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  BID:49303  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://www.tenable.com/plugins/nessus/55976
+|       https://www.securityfocus.com/bid/49303
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+49152/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49153/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49154/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49155/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49163/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+
+Host script results:
+|_samba-vuln-cve-2012-1182: No accounts left to try
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: No accounts left to try
+
+# Nmap done at Mon Aug 10 17:21:44 2020 -- 1 IP address (1 host up) scanned in 548.93 seconds

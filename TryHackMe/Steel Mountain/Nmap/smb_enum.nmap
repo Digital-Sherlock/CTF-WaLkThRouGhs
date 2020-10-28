@@ -1,0 +1,19 @@
+# Nmap 7.80 scan initiated Mon Aug 10 18:54:29 2020 as: nmap --script=smb-enum* -oN smb_enum.nmap 10.10.249.103
+# Nmap done at Mon Aug 10 19:19:30 2020 -- 1 IP address (0 hosts up) scanned in 1500.33 seconds
+     STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+445/tcp   open  microsoft-ds
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ms-wbt-server
+8080/tcp  open  http-proxy
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49161/tcp open  unknown
+49163/tcp open  unknown
+
+# Nmap done at Mon Aug 10 18:55:04 2020 -- 1 IP address (1 host up) scanned in 25.80 seconds

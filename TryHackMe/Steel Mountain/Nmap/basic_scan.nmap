@@ -1,0 +1,34 @@
+# Nmap 7.80 scan initiated Mon Aug 10 17:09:35 2020 as: nmap -sC -sV -O -oN basic_scan.nmap 10.10.170.94
+Nmap scan report for 10.10.170.94
+Host is up (0.10s latency).
+Not shown: 989 closed ports
+PORT      STATE SERVICE            VERSION
+80/tcp    open  http               Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2020-08-10T21:12:40+00:00; +1s from scanner time.
+8080/tcp  open  http               HttpFileServer httpd 2.3
+|_http-server-header: HFS 2.3
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49163/tcp open  unknown
+Device type: firewall
+Running (JUST GUESSING): Fortinet embedded (87%)
+OS CPE: cpe:/h:fortinet:fortigate_100d
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.00: 
+|_    Message signing enabled but not required
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Aug 10 17:13:39 2020 -- 1 IP address (1 host up) scanned in 243.85 seconds
