@@ -1,0 +1,38 @@
+# Nmap 7.80 scan initiated Thu Oct 29 18:25:29 2020 as: nmap --script=smb-enum* -T4 -oN smb_enum.nmap 10.10.236.43
+Nmap scan report for 10.10.236.43
+Host is up (0.10s latency).
+Not shown: 995 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Host script results:
+|_smb-enum-sessions: ERROR: Script execution failed (use -d to debug)
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.10.236.43\ADMIN$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Remote Admin
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.236.43\C$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Default share
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.236.43\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: Remote IPC
+|     Anonymous access: <none>
+|     Current user access: READ/WRITE
+|   \\10.10.236.43\nt4wrksv: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Anonymous access: <none>
+|_    Current user access: READ/WRITE
+|_smb-enum-users: ERROR: Script execution failed (use -d to debug)
+
+# Nmap done at Thu Oct 29 18:26:28 2020 -- 1 IP address (1 host up) scanned in 58.60 seconds
