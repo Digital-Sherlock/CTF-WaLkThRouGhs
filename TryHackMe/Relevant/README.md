@@ -39,7 +39,7 @@ No exact OS matches for host (test conditions non-ideal).
 Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
 ```
 
-Full scan is [here]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Relevant/Nmap/basic_scan.nmap" "full nmap scan")
+Full scan is [here]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Relevant/Nmap/basic_scan.nmap", "full nmap scan")
 
 **Nmap vuln scan results:**
 
