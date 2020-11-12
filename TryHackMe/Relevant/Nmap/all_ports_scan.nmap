@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Tue Nov 10 18:18:33 2020 as: nmap -p- -T4 -oN all_ports_scan.nmap 10.10.195.120
+Nmap scan report for 10.10.195.120
+Host is up (0.10s latency).
+Not shown: 65529 filtered ports
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+49663/tcp open  unknown
+
+# Nmap done at Tue Nov 10 18:22:41 2020 -- 1 IP address (1 host up) scanned in 248.55 seconds
