@@ -1,0 +1,25 @@
+# Nmap 7.80 scan initiated Thu Nov 12 17:38:33 2020 as: nmap --script=vuln -T4 -oN vuln_scan.nmap 10.10.165.59
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.165.59
+Host is up (0.11s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+80/tcp open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /blog/: Blog
+|   /phpmyadmin/: phpMyAdmin
+|   /wordpress/wp-login.php: Wordpress login page.
+|_  /blog/wp-login.php: Wordpress login page.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+
+# Nmap done at Thu Nov 12 17:39:34 2020 -- 1 IP address (1 host up) scanned in 60.97 seconds
