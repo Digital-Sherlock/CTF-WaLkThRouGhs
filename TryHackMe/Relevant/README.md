@@ -365,3 +365,9 @@ nt authority\system
 **Root.txt Flag:**
 
 C:\Users\Administrator\Desktop\root.txt
+
+### Resources
+
+---
+
+1. [PrintSpoofer](https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/) Explained.
