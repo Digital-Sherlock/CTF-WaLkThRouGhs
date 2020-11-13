@@ -370,4 +370,4 @@ C:\Users\Administrator\Desktop\root.txt
 
 ---
 
-1. [PrintSpoofer](https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/) Explained.
+1. [PrintSpoofer](https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/) explained.
