@@ -61,7 +61,7 @@ smb-vuln-ms17-010:
 |_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
 ```
 
->Vulnerability: [CVE-2017-0143 (EnernalBlue)]("https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010" "eternalblue")
+>Vulnerability: [CVE-2017-0143 (EnernalBlue)](https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010)
 
 **_Nmap smb-enum scan results:_**
 
@@ -260,7 +260,7 @@ Turns our we have the upload privileges.
 
 ---
 
-ASPX RevShell by **borjmz** --> [link]('https://github.com/borjmz/aspx-reverse-shell' 'github')
+ASPX RevShell by **borjmz** --> [link](https://github.com/borjmz/aspx-reverse-shell)
 
 ```c#
 <%@ Page Language="C#" %>
@@ -342,7 +342,7 @@ SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 
 >**SeImpersonatePrivilege is enabled**
 
-SeImpersonatePrivilege exploit explanation -  [PrintSpoofer]("https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/", "link")
+SeImpersonatePrivilege exploit explanation -  [PrintSpoofer](https://itm4n.github.io/printspoofer-abusing-impersonate-privileges/)
 
 ### Exploit
 
