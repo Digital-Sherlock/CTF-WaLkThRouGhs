@@ -1,4 +1,4 @@
-# Brief PowerShell Guide
+# Basic PowerShell Commands
 
 ## Getting Help with Commands
 
